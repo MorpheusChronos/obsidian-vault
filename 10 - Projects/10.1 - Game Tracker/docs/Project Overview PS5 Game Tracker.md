@@ -1,3 +1,4 @@
+```markdown
 # Game Tracker — Executive Summary
 
 **Project:** PS5 Game Tracker
@@ -80,3 +81,4 @@ The Notion Business plan isn’t cost‑effective as a documents‑only solution
 
 - Decision: swap Notion docs for Obsidian; keep data in Supabase
 - Benefits: lower doc costs, versioned rules, and AI usage that scales with tokens rather than a flat seat price
+```
