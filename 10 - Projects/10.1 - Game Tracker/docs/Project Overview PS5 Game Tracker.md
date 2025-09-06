@@ -38,7 +38,7 @@ First attempt used a simple deploy flow (Vercel + GitHub) with an external autom
 
 ## Back to square one, but …
 
-User asked AI for a [Make.com](http://Make.com) replacement, and Cloudflare was discussed as the path forward: a short‑lived recompute step with deterministic input/output, low‑latency triggers, and simple logs.
+User asked AI for a Make.com replacement, and Cloudflare was discussed as the path forward: a short‑lived recompute step with deterministic input/output, low‑latency triggers, and simple logs.
 
 - Goal: replace fragile multi‑step runs with a single pass that recalculates time windows and the play order
 - Benefit: faster updates without waiting on long intervals, and fewer moving parts to break
