@@ -1,0 +1,20 @@
+{
+  "cloudflareAccountId": "171615a17f84687158a80b222e613774",
+  "cloudflareAiGatewayId": "",
+  "cloudflareAiApiKey": "",
+  "cloudflareVectorizeApiKey": "",
+  "modelId": "@cf/meta/llama-3.1-8b-instruct-fast",
+  "maxTokens": 256,
+  "temperature": 0.6,
+  "textEmbeddingsModelId": "@cf/baai/bge-base-en-v1.5",
+  "vectorizeIndexName": "obsidian-notes",
+  "topK": 3,
+  "minSimilarityScore": 0.7,
+  "ignoredFolders": [],
+  "syncEnabled": false,
+  "autoSyncInterval": 30,
+  "cloudflareAiApiKeySaved": false,
+  "cloudflareVectorizeApiKeySaved": false,
+  "customTemplatesFolder": "ai/templates",
+  "logLevel": "error"
+}

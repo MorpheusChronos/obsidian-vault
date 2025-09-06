@@ -1,0 +1,199 @@
+{
+  "main": {
+    "id": "4a8570ae7c7c550f",
+    "type": "split",
+    "children": [
+      {
+        "id": "becb84901b36030e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6fcaaa31cf8f2da6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "20 - Personal/Personal folder.md",
+                "mode": "source",
+                "source": true,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "Personal folder"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e626cec1cbd6f115",
+    "type": "split",
+    "children": [
+      {
+        "id": "606d3d5322cc50c3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bd66c3632c3a5bc3",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "47479a911532571d",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "3e20bd9a4108bb04",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 301.5
+  },
+  "right": {
+    "id": "c8848364bf3a2ab5",
+    "type": "split",
+    "children": [
+      {
+        "id": "c42bdfb88a125c85",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f2016e3e5bccc399",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Welcome.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Welcome"
+            }
+          },
+          {
+            "id": "9ce4e00258f5559c",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Welcome.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Welcome"
+            }
+          },
+          {
+            "id": "beecbce3762d5db3",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "53d420ce97628ef2",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Welcome.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Welcome"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "obsidian-cloudflare-ai:Open AI Chat": false
+    }
+  },
+  "active": "6fcaaa31cf8f2da6",
+  "lastOpenFiles": [
+    "30 - Archive/Archive folder.md",
+    "20 - Personal/Personal folder.md",
+    "10 - Projects/10.1 - Game Tracker/knowledge base/RAG-Rules.md",
+    "_templates/README.md",
+    "20 - Personal/README.md",
+    "30 - Archive/README.md",
+    "10 - Projects/10.2 - Finance Tracker/knowledge base/RAG-Rules.md",
+    "README.md",
+    "Untitled.base",
+    "10 - Projects/10.1 - Game Tracker/docs/Project-Overview.md",
+    "Untitled.md",
+    "10 - Projects/10.1 - Game Tracker/journal/learning",
+    "10 - Projects/10.2 - Finance Tracker/knowledge base",
+    "10 - Projects/10.2 - Finance Tracker/docs/Untitled",
+    "10 - Projects/10.2 - Finance Tracker/docs",
+    "10 - Projects/10.1 - Game Tracker/journal",
+    "10 - Projects/10.1 - Game Tracker/knowledge base",
+    "10 - Projects/10.1 - Game Tracker/docs",
+    "10 - Projects/10.2 - Finance Tracker",
+    "10 - Projects/10.1 - Game Tracker",
+    "my-project-vault/Welcome.md",
+    "Welcome.md"
+  ]
+}

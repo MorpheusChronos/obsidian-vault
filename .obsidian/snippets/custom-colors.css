@@ -1,0 +1,41 @@
+/* Purple headings */
+.token.important {
+  color: #9333ea; /* A shade of purple */
+}
+
+
+
+.token.content {
+  color: #9333ea;
+}
+
+.markdown-preview-view code{
+color: #ffffff;
+}
+
+.token.punctuation {
+  color: #9333ea;
+}
+
+.cm-header{
+	color: #9333ea;
+}
+
+.cm-hmd-codeblock.cm-strong.cm-variable-2{
+  color: #9333ea;
+}
+
+.cm-hmd-codeblock.cm-variable-2{
+  color: #ffffff;
+}
+
+
+.tree-item-inner.nav-folder-title-content {
+ color: #FFA500;
+
+}
+
+.tree-item-inner.nav-file-title-content {
+ color: #EA4335;
+
+}
