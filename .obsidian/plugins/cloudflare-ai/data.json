@@ -3,7 +3,7 @@
   "cloudflareAiGatewayId": "",
   "cloudflareAiApiKey": "",
   "cloudflareVectorizeApiKey": "",
-  "modelId": "@cf/meta/llama-3.1-8b-instruct-fast",
+  "modelId": "@cf/meta/llama-3.1-8b-instruct",
   "maxTokens": 256,
   "temperature": 0.6,
   "textEmbeddingsModelId": "@cf/baai/bge-base-en-v1.5",

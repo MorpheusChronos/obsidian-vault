@@ -168,11 +168,26 @@
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
       "obsidian-git:Open Git source control": false,
-      "obsidian-cloudflare-ai:Open AI Chat": false
+      "obsidian-cloudflare-ai:Open AI Chat": false,
+      "copilot:Open Copilot Chat": false
     }
   },
   "active": "3c838f9694a5e5d4",
   "lastOpenFiles": [
+    "copilot-custom-prompts/Rewrite as tweet thread.md",
+    "copilot-custom-prompts/Rewrite as tweet.md",
+    "copilot-custom-prompts/Remove URLs.md",
+    "copilot-custom-prompts/Generate glossary.md",
+    "copilot-custom-prompts/Generate table of contents.md",
+    "copilot-custom-prompts/Make longer.md",
+    "copilot-custom-prompts/Make shorter.md",
+    "copilot-custom-prompts/Emojify.md",
+    "copilot-custom-prompts/Explain like I am 5.md",
+    "copilot-custom-prompts/Simplify.md",
+    "copilot-custom-prompts/Summarize.md",
+    "copilot-custom-prompts/Translate to Chinese.md",
+    "copilot-custom-prompts/Fix grammar and spelling.md",
+    "copilot-custom-prompts",
     "10 - Projects/10.1 - Game Tracker/docs/Project Overview PS5 Game Tracker.md",
     "10 - Projects/10.1 - Game Tracker/knowledge base/RAG-Rules.md",
     "10 - Projects/10.2 - Finance Tracker/knowledge base/Finance RAG-Rules.md",
@@ -194,9 +209,6 @@
     "10 - Projects/10.1 - Game Tracker/journal",
     "10 - Projects/10.1 - Game Tracker/knowledge base",
     "10 - Projects/10.1 - Game Tracker/docs",
-    "10 - Projects/10.2 - Finance Tracker",
-    "10 - Projects/10.1 - Game Tracker",
-    "my-project-vault/Welcome.md",
-    "Welcome.md"
+    "10 - Projects/10.2 - Finance Tracker"
   ]
 }
