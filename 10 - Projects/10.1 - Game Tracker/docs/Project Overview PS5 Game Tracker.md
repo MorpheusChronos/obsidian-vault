@@ -1,18 +1,19 @@
 ```markdown
+
 # Game Tracker — Executive Summary
 
-**Project:** PS5 Game Tracker
+**Project:** PS5 Game Tracker
 
-**Goal:** To build a personalized application that automates the management and prioritization of a large backlog of PlayStation 5 games.
+**Goal:** Build a personalised app that automates managing and prioritising a large PS5 backlog.
 
-**Functionality:** The system will use a custom-built, AI-powered sequential ordering algorithm to create a realistic, date-aware game queue. By analyzing upcoming game release dates and estimating available time between them, it will intelligently schedule backlog and in-progress games into appropriate time windows.
+**Functionality:** A custom, AI-powered sequential ordering algorithm creates a realistic, date‑aware game queue. It analyses upcoming release dates and your available time between them to schedule backlog and in‑progress games into appropriate time windows.
 
-**Key Features:**
+## Key Features
 
-- **AI-Driven Scheduling**: The application computes an adaptive and optimized game queue that adjusts automatically to changes in your schedule and new game releases.
-- **Persistent Knowledge**: Leverages a custom RAG system, grounded in your project's rules and documentation, to provide a contextual AI assistant.
-- **Automated Sync**: Integrates with external APIs (like PSN and IGDB) via Cloudflare Workers to keep game data and metadata accurate and up-to-date.
-- **Intuitive Interface**: Provides a dashboard on a Vercel frontend for managing your game collection and visualizing your queue.
+- **AI‑Driven Scheduling:** Adaptive queue that auto‑adjusts to schedule changes and new releases.
+- **Persistent Knowledge (RAG):** Contextual AI assistant grounded in your project’s rules and docs.
+- **Automated Sync:** Cloudflare Workers integrate PSN and IGDB to keep data accurate and up‑to‑date.
+- **Intuitive Interface:** Vercel dashboard to manage the collection and visualise the queue.
 
 # Project History
 
@@ -21,64 +22,64 @@
 The sheet approach collapsed under real constraints: no reliable time‑window logic, unstable formatting, and unhelpful Copilot prompts.
 
 - Frequent over‑allocations and noisy recalculations
-- User requires a more intuitive platform with more advanced AI capabilities that can intelligently adapt to changing schedules.
+- Need for a more intuitive platform with adaptive AI
 
 ## Notion discovered
 
-Seemed perfect at the beginning: great for capturing the tracker concept, structuring properties, and documenting rules. The problems started when “Cumulative Backlog Hours” failed due to Notion limitations—rolling up cross‑record totals and feeding them back into per‑record decisions created circular dependencies and stalled recalculations.
+Great for capturing the tracker concept, structuring properties, and documenting rules. Problems began when “Cumulative Backlog Hours” failed due to Notion limitations. Cross‑record rollups feeding back into per‑record decisions caused circular dependencies and stalled recalculations.
 
 - Rollups + formulas couldn’t maintain a running total across changing release windows
-- Conclusion: Notion remains ideal for organization and notes, but the sequencing engine needs a consistent recompute outside formula chains
+- Conclusion: Notion is ideal for organisation and notes, but the sequencing engine must recompute outside formula chains
 
 ## Discovering external options
 
-First attempt used a simple deploy flow (Vercel + GitHub) with an external automation via Make.com. The approach failed in practice: Make’s complex scenario sent inconsistent JSON payloads and had a 15‑minute run interval, which made game data updates too infrequent to be practical going forward.
+First attempt: Vercel + GitHub + Make.com. It failed in practice: complex scenarios sent inconsistent JSON and ran every 15 minutes, too infrequent for practical updates.
 
-- Outcome: pipelines built on long‑running, multi‑step Make scenarios proved unreliable for deterministic ordering
+- Outcome: long‑running, multi‑step Make scenarios were unreliable for deterministic ordering
 
 ## Back to square one, but …
 
-User asked AI for a Make.com replacement, and Cloudflare was discussed as the path forward: a short‑lived recompute step with deterministic input/output, low‑latency triggers, and simple logs.
+Cloudflare proposed as the path forward: short‑lived recompute with deterministic I/O, low latency triggers, and simple logs.
 
-- Goal: replace fragile multi‑step runs with a single pass that recalculates time windows and the play order
-- Benefit: faster updates without waiting on long intervals, and fewer moving parts to break
+- Goal: replace fragile multi‑step runs with a single pass that recalculates time windows and play order
+- Benefit: faster updates and fewer moving parts
 
-## More Research
+## More research
 
-Introduced a lightweight Vercel frontend as the single UI surface. Defined two direct paths with no middleman:
+A lightweight Vercel frontend became the single UI. Two direct paths, no middleman:
 
 - Notion → Vercel: data entry and updates flow directly to the UI
-- Cloudflare → Vercel: sequential ordering results feed the UI, with room for multiple workers as future enhancements
+- Cloudflare → Vercel: sequential ordering results feed the UI; room for more workers later
 
-Rationale: keep data and sequencing separate but converge in the UI. This dual system avoids brittle intermediaries, shortens feedback loops, and keeps updates fast and predictable.
+Rationale: keep data and sequencing separate but converge in the UI. Avoid brittle intermediaries, shorten feedback loops, and keep updates fast and predictable.
 
-## Another hurdle - Notion AI New Chat
+## Another hurdle — Notion AI New Chat
 
-New chats had no memory of the project, so the user had to re‑introduce the system each time. Verification methods were attempted to keep quality high, but the AI learned to game the process, passing checks without truly following the rules.
+New chats had no memory, so the system had to be re‑introduced each time. Verification methods were gamed by the AI, passing checks without following rules.
 
-- Impact: high friction onboarding per session, false positives from gamed verification
-- Result: this approach was abandoned; solutions must assume stateless sessions and use safeguards that cannot be optimized around
+- Impact: high friction onboarding, false positives
+- Result: abandon this; assume stateless sessions and use safeguards that cannot be optimised around
 
-## Possible solution?
+## Possible solution
 
-Use a RAG system so every AI response is grounded in your rules without any user “training” step. Cloudflare Workers retrieve the latest rules, select the relevant ones per request, and inject them into the prompt before generation. This keeps sessions stateless and consistent.
+Use RAG so every AI response is grounded in rules without a training step. Cloudflare Workers retrieve the latest rules, select relevant ones per request, and inject them into the prompt before generation.
 
-- Retrieval before generation: responses cite the exact rules used
+- Retrieval before generation: responses cite exact rules used
 - No memory dependency: each call rebuilds context from the rules index
 
-## Fundamental System changes
+## Fundamental system changes
 
 ### Part 1 — Data platform shift (Supabase)
 
-Notion’s limitations for complex computations and maintaining data integrity (circular rollups, stalled recalcs, brittle formula chains) make it unsuitable as the system of record. Moving data to Supabase resolves this by providing a proper database with reliable constraints and policies.
+Notion’s limits for complex computation and integrity make it unsuitable as the system of record. Supabase provides proper constraints and policies.
 
-- Decision: store all game data in Supabase instead of Notion
+- Decision: store all game data in Supabase
 - Benefits: strong integrity (RLS, constraints), deterministic recompute, clearer inputs and outputs
 
 ### Part 2 — Docs platform and cost (Obsidian + token‑based Copilot)
 
-The Notion Business plan isn’t cost‑effective as a documents‑only solution. Obsidian is proposed for docs and rules, and a token‑priced Copilot plugin offers better economics for AI assistance.
+Notion Business is not cost‑effective for docs only. Obsidian for docs and rules plus a token‑priced Copilot plugin offers better economics.
 
-- Decision: swap Notion docs for Obsidian; keep data in Supabase
-- Benefits: lower doc costs, versioned rules, and AI usage that scales with tokens rather than a flat seat price
+- Decision: move docs to Obsidian; keep data in Supabase
+- Benefits: lower doc costs, versioned rules, AI usage that scales with tokens rather than flat seats
 ```
