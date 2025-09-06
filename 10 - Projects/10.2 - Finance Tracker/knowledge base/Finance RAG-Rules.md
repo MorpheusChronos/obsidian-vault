@@ -1,3 +1,10 @@
+---
+title: Finance RAG rules
+category: finance RAG-policy
+priority: High
+created: 2025-09-06
+tags:
+---
 ```markdown
 # Finance Tracker RAG Rules
 

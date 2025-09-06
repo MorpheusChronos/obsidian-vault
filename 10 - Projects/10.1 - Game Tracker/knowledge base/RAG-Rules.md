@@ -1,3 +1,12 @@
+---
+title: RAG-Rules
+category: RAG-policy
+priority: High
+created: 2025-09-06
+tags:
+  - rules
+  - rag
+---
 ```markdown
 ## 1. Contract-first tool inputs
 * **Priority**: High
