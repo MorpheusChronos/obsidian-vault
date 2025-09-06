@@ -32,7 +32,7 @@ Seemed perfect at the beginning: great for capturing the tracker concept, struct
 
 ## Discovering external options
 
-First attempt used a simple deploy flow (Vercel + GitHub) with an external automation via [Make.com](http://Make.com). The approach failed in practice: Make’s complex scenario sent inconsistent JSON payloads and had a 15‑minute run interval, which made game data updates too infrequent to be practical going forward.
+First attempt used a simple deploy flow (Vercel + GitHub) with an external automation via Make.com. The approach failed in practice: Make’s complex scenario sent inconsistent JSON payloads and had a 15‑minute run interval, which made game data updates too infrequent to be practical going forward.
 
 - Outcome: pipelines built on long‑running, multi‑step Make scenarios proved unreliable for deterministic ordering
 
