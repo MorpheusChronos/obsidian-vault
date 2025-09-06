@@ -11,10 +11,14 @@
             "id": "47120c47bba80f07",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "10 - Projects/10.1 - Game Tracker/docs/Project Overview PS5 Game Tracker.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Project Overview PS5 Game Tracker"
             }
           }
         ]
@@ -167,10 +171,10 @@
       "obsidian-cloudflare-ai:Open AI Chat": false
     }
   },
-  "active": "bd66c3632c3a5bc3",
+  "active": "47120c47bba80f07",
   "lastOpenFiles": [
-    "10 - Projects/10.1 - Game Tracker/docs/Project-Overview.md",
     "10 - Projects/10.1 - Game Tracker/docs/test.md",
+    "10 - Projects/10.1 - Game Tracker/docs/Project Overview PS5 Game Tracker.md",
     "10 - Projects/10.1 - Game Tracker/knowledge base/RAG-Rules.md",
     "20 - Personal/Personal folder.md",
     "30 - Archive/Archive folder.md",
